@@ -1,0 +1,15 @@
+<!-- {{produtos | json}} -->
+
+<!-- <ul>
+    <li *ngFor="let p of produtos">{{p.desc}} - {{p.reg_anvisa}}</li>
+</ul> -->
+
+<div class="container">
+    <div class="row">
+        <!-- criando um laço para a inserção de produtos e adicionando
+             o atributo [produto] que foi criado no arquivo "produto.component.ts"-->
+        <!-- <app-produto *ngFor="let prod of produtos" [produto]="prod"></app-produto> -->
+        <app-produto *ngFor="let prod of produtosExibidos" [produto]="prod"></app-produto>
+        <!-- {{grupoAtivo | json}} -->
+    </div>
+</div>

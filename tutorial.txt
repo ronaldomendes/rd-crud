@@ -1,0 +1,53 @@
+criando um novo projeto 
+    ng new rd-crud
+
+iniciar o serviço 
+    ng serve -o
+
+criando os componentes 
+    ng g c components/nav
+    ng g c components/home
+    ng g c components/sobre
+    ng g c components/contato
+    ng g c components/lista-de-produtos
+    ng g c components/grupos
+    ng g c components/produto
+
+para adicionar um componente em outro, utilize a tag <app-"nomeDoComponente">
+
+editar a "const routes" no arquivo "app-routing.module.ts" para ficar dessa maneira
+    {
+        path: "",
+        component: HomeComponent
+    }
+as linhas acima devem ser adicionadas para cada componente
+
+os componentes lista-de-produtos e grupos devem ser adicionados dentro do componente "home"
+
+na pasta "app", crie um novo diretório com o nome "models", e em seguida adicione o arquivo "Grupo.ts"
+
+no arquivo Grupo.ts, crie uma classe e seu construtor, dessa forma
+    constructor(public codigo: number, public descricao: string) { }
+
+abra o arquivo grupos.component.ts e edite da seguinte forma
+    public grupos: Grupo[] = []; // instancie a classe criada anteriormente
+em seguida, adicione ao construtor os elementos
+    this.grupos.push(new Grupo(1, "Informática")) // adicionar a quantidade desejada
+
+** instalar o bootstrap com o comando npm install bootstrap
+** adicionar o caminho do bootstrap ao arquivo angular.json, em "styles"
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+=============================================================================================
+
+trabalhando com API em angular
+
+criando os serviço
+    ng g service services/http
+
+no arquivo http.service.ts, editar da seguinte forma
+    import { HttpClient } from "@angular/common/http";
+    constructor(private http: HttpClient) { }
+
+compilando o seu projeto e adicionando a pasta "dist"
+    ng build --prod
