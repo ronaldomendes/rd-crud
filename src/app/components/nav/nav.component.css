@@ -1,0 +1,3 @@
+.menuActive a:hover, .menuActive a:focus {
+    background-color: tomato;
+}

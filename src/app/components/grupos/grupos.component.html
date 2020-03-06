@@ -1,8 +1,8 @@
 <!-- {{grupos | json}} -->
 
-<ul>
+<ul class="menuGrupos">
     <li *ngFor="let g of grupos">
-        <!-- <a href="#" (click)="grupoClicado.emit(g)">{{g.descricao}}</a> -->
-        <a href="#" (click)="grupoClicado.emit(g)">{{g.descricao}}</a>
+        <!-- <a href="#" (click)="grupoClicado.emit(g)">{{g}}</a> -->
+        <a (click)="grupoClicado.emit(g)">{{g.descricao}}</a>
     </li>
 </ul>

@@ -13,6 +13,9 @@ export class GruposComponent implements OnInit {
   // evento criado para selecionar o grupo criado
   @Output() grupoClicado = new EventEmitter()
 
+  // adicionando um grupo para retornar todos os itens
+  private grupoTotal: Grupo = new Grupo(0, "TODOS")
+
   // adicionando o httpService para a comunicação do serviço
   constructor(private http: HttpService) {
     
@@ -20,6 +23,12 @@ export class GruposComponent implements OnInit {
       data => {
         // console.log(data)
         // data.forEach((d) => console.log(d.descricao))
+
+        // preenchendo a categoria com spread operator
+        // this.grupos = [this.grupoTotal, ...data]
+        
+        // preenchendo a categoria com push
+        this.grupos.push(this.grupoTotal)
         data.forEach((d) => this.grupos.push(new Grupo(d.codigo, d.descricao)))
       }
     )    

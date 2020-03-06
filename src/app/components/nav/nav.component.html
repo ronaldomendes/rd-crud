@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
     <ul class="navbar-nav mr-auto">
-        <li class="nav-link">
+        <!-- <li class="nav-link">
             <a href="#" class="navbar-brand" routerLink="/">Home</a>
         </li>
         <li class="nav-link">
@@ -8,6 +8,14 @@
         </li>
         <li class="nav-link">
             <a href="#" class="navbar-brand" routerLink="/contato">Contato</a>
+        </li> -->
+
+        <!-- <li [ngClass]="{'menuActive':i.ativo}" *ngFor="let i of itens" class="nav-link">
+            <a href="#" (click)="marcarItem(i)" class="navbar-brand" routerLink="{{i.route}}">{{i.label}}</a>
+        </li> -->
+
+        <li routerLinkActive="menuActive" *ngFor="let i of itens" class="nav-link">
+            <a href="#" class="navbar-brand" routerLink="{{i.route}}">{{i.label}}</a>
         </li>
     </ul>
 </nav>

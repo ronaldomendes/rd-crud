@@ -1,0 +1,6 @@
+.menuGrupos a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    color: turquoise;
+}

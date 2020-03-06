@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   // criando o evento de seleção do grupo
   listarGrupo(grupo: Grupo) {
-    console.log(grupo)
+    // console.log(grupo)
     // console.log(this.lista)
     this.lista.listaDoGrupo(grupo.codigo)
 
