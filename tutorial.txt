@@ -51,3 +51,8 @@ no arquivo http.service.ts, editar da seguinte forma
 
 compilando o seu projeto e adicionando a pasta "dist"
     ng build --prod
+
+=============================================================================================
+
+Adicionar ao arquivo app.module.ts na opção Import a seguinte opção:
+    import { ReactFormsModule} from "@angular/forms" e em imports: ReactFormsModule

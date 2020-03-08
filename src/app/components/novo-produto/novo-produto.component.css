@@ -3,5 +3,5 @@ input, button, select {
 }
 
 input [type="checkbox"] {
-    display: inline-block;
+    display: inline;
 }

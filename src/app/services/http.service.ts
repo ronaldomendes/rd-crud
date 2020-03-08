@@ -56,4 +56,16 @@ export class HttpService {
       )
     )
   }
+
+  addProduto(p: Produto) {
+    let produtoParaEnviar = {
+      COD_PRODUTO: p.codigo, 
+      DESC: p.desc, 
+      REG_ANVISA: p.reg_anvisa,
+      FL_CONTROLADO: p.controlado, 
+      COD_GRUPO: p.cod_grupo
+    }
+
+    return this.http.post(`${urlAPI}/produtos`, produtoParaEnviar)
+  }
 }
